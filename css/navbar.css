@@ -1,0 +1,428 @@
+/*ALL NAVBAR STYLES*/
+
+
+
+  .gradient-div {
+    width: 100%;
+    height: 70px; /* Ajustez la hauteur selon vos besoins */
+    background: #000000;
+    position: fixed;
+    bottom: 0;
+  }
+  
+/* Mobile nav bar */
+@supports (
+(-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))
+) {
+.mobile-nav {
+justify-content: center;
+position: fixed;
+bottom: 0px;
+z-index: 99;
+text-align: center;
+padding: 10px;
+margin-bottom: 10px;
+margin: 5% auto;
+border-style: solid;
+border-color: #404040;
+border-radius: 1px;
+border-width: 1px;
+left: 0;
+right: 0;
+width: 73%;
+max-width: 500px;
+background-color: rgba(42, 42, 42, 0.4);
+border-radius: 40px;
+-webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(15px);
+height: 70px;
+}
+}
+
+.bloc-icon {
+font-size: 36px;
+margin: 15px;
+color: #42aaff;
+width: 50%;
+}
+
+/* Styles pour les iPhones avec encoche (iPhone X ou ultérieurs) */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  /* iPhone X, XS, 11 Pro, 12 Pro */
+  .mobile-nav {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  /* iPhone XR, 11, 11 Pro Max, 12, 12 Pro Max */
+  .mobile-nav {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  /* iPhone 12, 13 */
+  .mobile-nav {
+    margin-bottom: 30px;
+  }
+}
+/* Styles pour l'iPhone 12 Mini */
+@media only screen and (device-width: 360px) and (device-height: 780px) and (-webkit-device-pixel-ratio: 3) {
+  /* iPhone 12 Mini */
+  .mobile-nav {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+.mobile-nav {
+display: none;
+}
+}
+
+@media only screen and (max-device-width: 812px) {
+.bottom-tab-bar {
+padding-bottom: 25px;
+}
+}
+
+/* iPad nav bar */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    /* background-color: #2c2c2c; */
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(10px);
+    background-color: #2525257d;
+}
+
+.page-content-wrapper {
+  margin-top: 50px;
+  margin-bottom: 58px; }
+
+.hero-slides {
+  position: relative;
+  z-index: 1; }
+  .hero-slides .owl-prev,
+  .hero-slides .owl-next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.11);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    left: 0;
+    margin-top: -15px;
+    color: #ffffff;
+    display: none; }
+  .hero-slides .owl-next {
+    left: auto;
+    right: 0; }
+  .hero-slides .owl-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .hero-slides .owl-dots .owl-dot {
+      -webkit-transition-duration: 500ms;
+              transition-duration: 500ms;
+      position: relative;
+      z-index: 1;
+      margin: 0 5px;
+      width: 8px;
+      height: 8px;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 8px;
+              flex: 0 0 8px;
+      max-width: 8px;
+      background-color: #ebebeb;
+      border-radius: 50%; }
+      .hero-slides .owl-dots .owl-dot.active {
+        background-color: #ffaf00; }
+        .hero-slides .owl-dots .owl-dot.active::after {
+          position: absolute;
+          width: calc(100% + 8px);
+          height: calc(100% + 8px);
+          z-index: 1;
+          content: "";
+          border: 2px solid #ffaf00;
+          left: -4px;
+          top: -4px;
+          border-radius: 50%; }
+
+.single-hero-slide {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 180px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 6px; }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .single-hero-slide {
+      height: 200px; } }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .single-hero-slide {
+      height: 220px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-hero-slide {
+      height: 280px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .single-hero-slide {
+      height: 300px; } }
+  @media only screen and (min-width: 1200px) {
+    .single-hero-slide {
+      height: 420px; } }
+  .single-hero-slide .slide-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+    .single-hero-slide .slide-content .slide-text {
+      padding-left: 2rem;
+      padding-right: 1rem; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .single-hero-slide .slide-content h4 {
+        font-size: 2rem; } }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .single-hero-slide .slide-content h4 {
+        font-size: 2rem; } }
+    @media only screen and (min-width: 1200px) {
+      .single-hero-slide .slide-content h4 {
+        font-size: 2.5rem; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .single-hero-slide .slide-content p {
+        font-size: 1.125rem; } }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .single-hero-slide .slide-content p {
+        font-size: 1.125rem; } }
+    @media only screen and (min-width: 1200px) {
+      .single-hero-slide .slide-content p {
+        font-size: 1.25rem; } }
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  margin: 12px;
+}
+ 
+.sidebar a.active {
+  background-color: #404040;
+  color: white;
+  border-radius: 15px;
+  margin: 12px
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  margin: 12px;
+  border-radius: 15px;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 0%;
+    height: 0;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.bloc-icon i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+
+/*install bar appinfos.html*/
+.getbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #1c1c1cbd;
+    border-radius: 20px 20px 0 0;
+    z-index: 99;
+    border: 1px solid #393939;
+}
+.get {
+  background-color: #42aaff;
+  border-radius: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  border: 0;
+  font-size: 14px;
+  width: 74%;
+  height: 45px;
+}
+.getipa {
+  background-color: #1c1c1c69;
+  border-radius: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  border: 0;
+  font-size: 14px;
+  width: 22%;
+  height: 45px;
+  float: right;
+  border: solid 1px 42aaff;
+}
+.getipa.clicked {
+  animation: click 0.2s linear;
+}
+.get.clicked {
+  animation: click 0.2s linear;
+}
+/* Styles pour les iPhones avec encoche (iPhone X ou ultérieurs) */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  /* iPhone X, XS, 11 Pro, 12 Pro */
+  .getbar button {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  /* iPhone XR, 11, 11 Pro Max, 12, 12 Pro Max */
+  .getbar button {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  /* iPhone 12, 13 */
+  .getbar button {
+    margin-bottom: 15px;
+  }
+}
+/* Styles pour l'iPhone 12 Mini */
+@media only screen and (device-width: 360px) and (device-height: 780px) and (-webkit-device-pixel-ratio: 3) {
+  /* iPhone 12 Mini */
+  .getbar button {
+    margin-bottom: 15px;
+  }
+}
+@keyframes click {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+
+/*top nav bar title + back*/
+@media only screen and (min-width: 768px) {
+.toptitle {
+    background-color: #1212128a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    margin-left: 200px;
+}
+}
+
+
+.toptitle {
+    background-color: #1212128a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+/*SECTIONS CHOOSE*/
+.sectionscarr {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sections {
+  background-color: #1c1c1c;
+  width: 100px;
+  height: 37px;
+  border-radius: 50px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  scroll-snap-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid rgb(37, 37, 39);
+}
+
+
+@media screen and (max-width: 768px) {
+  .sectionscarr {
+    flex-wrap: nowrap;
+  }
+  
+  .sections {
+    min-width: 100px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-110px);
+  }
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #000000;
+    width: 100%;
+    z-index: 9999999;
+    position: sticky;
+    top: 0px;
+    padding-top: 17px;
+    height: 129px;
+	border-radius: 1px;
+}

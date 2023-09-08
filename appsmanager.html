@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/featured.css" keep>
+    <link rel="stylesheet" href="css/navbar.css" keep>
+	<link rel="stylesheet" href="css/block.css" keep>
+    <link rel="stylesheet" href="css/styles.css" keep>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport"content="initial-scale=1, viewport-fit=cover, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>	Installer</title>
+    <script src="/js/index.js"></script>
+    <script src="/js/repo-handler.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/repojs/src/index.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/a5ae6c00ff.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body onload="afficherDonnees()">
+                                                                                   
+
+    <div class="content">
+    <h1 style="font-family:helvetica;font-size:35px;color:white;margin-top: 24px;">Installed</h1> 
+
+
+	    
+	 
+<i onclick="openModal()"style=" float:right; margin-top: -57px;font-size:29px;color: #42aaff;" class="fa fa-cloud-download" ></i>
+	    
+<div id="bottomModal" class="modal">
+  <div class="modal-handle"></div> 
+  <div class="modal-content">
+    <img src="https://scarletweb.ru/logo.JPEG" alt="Image" class="modal-image">
+    <div class="modal-text">
+      <div class="modal-line">Soon</div>
+      <div class="modal-line"></div>
+    </div>
+  </div>
+  <div class="modal-progress"></div>
+</div>
+
+
+
+
+
+
+<div id="my-modal" class="my-modal">
+  <div class="my-modal-content">
+    <div class="my-modal-bar"></div>
+    <h1 style="font-family:helvetica;font-size:28px;color: #fff;margin-top: 0px;"></h1>
+    <p>you can choose which certificate you want to use.</hp>
+
+  </div>
+</div>
+
+    <script>
+function openModal() {
+  const bottomModal = document.getElementById('bottomModal');
+  bottomModal.classList.toggle('open');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const modalHandle = document.querySelector('.modal-handle');
+
+  modalHandle.addEventListener('scroll', function() {
+    if (modalHandle.scrollTop === modalHandle.scrollHeight - modalHandle.offsetHeight) {
+      const bottomModal = document.getElementById('bottomModal');
+      bottomModal.classList.remove('open');
+    }
+
+  });
+});
+
+ </script>
+    <script>
+var startY;
+var modal = document.getElementById("my-modal");
+
+function showModal() {
+  modal.classList.add("open");
+}
+
+function closeModal() {
+  modal.classList.remove("open");
+}
+
+modal.addEventListener("touchstart", function(event) {
+  startY = event.touches[0].clientY;
+});
+
+modal.addEventListener("touchmove", function(event) {
+  var currentY = event.touches[0].clientY;
+  if (currentY > startY) {
+    event.preventDefault();
+    closeModal();
+  }
+});
+
+
+ </script>
+
+
+
+	    
+<p style="font-family:helvetica;font-size:18px;color:#e4e4e4;margin-bottom: 15px;margin-top: 20px;">Installed Apps</p>
+ 
+                <div class="app_cell_left">
+                  <img src="logo.JPEG" class="appicon">
+                  <div class="app_cell_meta">
+                    <div class="appname">Yeppy RC</div>
+                    <div class="appsection">Version 0.1</div>
+                  </div>
+                </div>
+	 <div   
+	 
+<p style="font-family:helvetica;font-size:18px;color:#e4e4e4;margin-bottom: 10px;margin-top: 20px;">Repos</p>		
+         <i style=" float:right; margin-top: -31px;font-size:20px;color: #42aaff;" class="fa-solid fa-plus" id="popupButton"></i>
+
+    <div id="repos" class="repos">
+<a href="repoview.html?repo=https://scarletweb.ru/apps.json">     
+<div class="item">
+    <i class="fa-solid fa-circle-minus" aria-hidden="true"></i>
+       <img src="https://scarletweb.ru/logo.JPEG">
+       <h2>Yeppy Repo</h2>
+    <p>Yeppy team</p>
+</div>
+</a>
+    </div>
+    </div>
+        <br>
+<center>
+<div class="appList" id="appList"></div>
+<center>
+        <nav class="mobile-nav">
+            <a href="web.html" class="bloc-icon">
+                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+            </a>
+            <a href="appsmanager.html" class="bloc-icon">
+                <i class="fas fa-signature" style="color: #42aaff;"></i>
+            </a>
+            <a href="search.html" class="bloc-icon">
+                <i class="fa fa-search" style="color: #ffffff;"></i>
+            </a>
+        </nav>
+<div class="gradient-div"></div>
+
+<div class="hidecolor">	
+<input type="color" id="color-picker">
+<button id="reset-button">Reset</button>
+</div>
+<script>
+
+    function setAccentColor(color) {
+      localStorage.setItem('accentColor', color);
+    }
+
+
+    function getAccentColor() {
+      return localStorage.getItem('accentColor');
+    }
+
+
+    function applyAccentColor() {
+      const accentColor = getAccentColor() || '#7163FF'; 
+      document.documentElement.style.setProperty('--accent-color', accentColor);
+    }
+
+
+    function resetAccentColor() {
+      setAccentColor('#7163FF'); 
+      applyAccentColor();
+    }
+
+
+    const colorPicker = document.getElementById('color-picker');
+    colorPicker.addEventListener('change', function() {
+      const color = this.value;
+      setAccentColor(color);
+      applyAccentColor();
+    });
+	
+
+
+
+    const resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('click', function() {
+      resetAccentColor();
+    });
+
+
+    applyAccentColor();
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/repojs/src/index.js" crossorigin="anonymuos"></script>
+<script>
+function openPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.style.display = "block";
+}
+
+function closePopup() {
+  var popup = document.getElementById("myPopup");
+  popup.style.display = "none";
+}
+
+    </script>
+<script>
+
+
+function afficherReposDepuisLocalStorage() {
+  var repoURLs = JSON.parse(localStorage.getItem("repoURLs")) || [];
+
+  repoURLs.forEach(function(url) {
+    fetch(url)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        var reposDiv = document.getElementById("repos");
+        var infoDiv = createRepoElement(data);
+        
+        var repoLink = document.createElement("a");  
+        repoLink.href = "repoview.html?repo=" + encodeURIComponent(url);  
+        repoLink.appendChild(infoDiv);  
+        
+        reposDiv.appendChild(repoLink);
+      })
+      .catch(function(error) {
+        console.log('Erreur', error);
+      });
+  });
+}
+
+
+function afficherInfosDepuisJSON() {
+  var url = prompt("Enter URL to repo:");
+
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var reposDiv = document.getElementById("repos");
+      var infoDiv = createRepoElement(data);
+
+      var repoLink = document.createElement("a");  // 
+      repoLink.href = "repoview.html?repo=" + encodeURIComponent(url);  
+      repoLink.appendChild(infoDiv);  
+      
+      reposDiv.appendChild(repoLink);
+
+      var repoURLs = JSON.parse(localStorage.getItem("repoURLs")) || [];
+      repoURLs.push(url);
+      localStorage.setItem("repoURLs", JSON.stringify(repoURLs));
+    })
+    .catch(function(error) {
+      console.log('Error', error);
+      alert('Error, invalid repo', error);
+    });
+}
+
+function createRepoElement(data) {
+  var infoDiv = document.createElement("div");
+  infoDiv.className = "item";
+
+  var deleteIcon = document.createElement("i");
+  deleteIcon.className = "fa-solid fa-circle-minus";
+  deleteIcon.style.cursor = "pointer";
+  infoDiv.appendChild(deleteIcon);
+
+  var iconElement = document.createElement("img");
+  iconElement.src = data.Info.repoIcon;
+  infoDiv.appendChild(iconElement);
+
+  var repoNameElement = document.createElement("h2");
+  repoNameElement.textContent = data.Info.repoName;
+  infoDiv.appendChild(repoNameElement);
+
+  var repoAuthorElement = document.createElement("p");
+  repoAuthorElement.textContent = data.Info.repoAuthor;
+  infoDiv.appendChild(repoAuthorElement);
+
+  deleteIcon.addEventListener("click", function () {
+    if (confirm("Delete repo?")) {
+	
+      var repoURLs = JSON.parse(localStorage.getItem("repoURLs")) || [];
+      var index = repoURLs.indexOf(url);
+      if (index !== -1) {
+        repoURLs.splice(index, 1);
+        localStorage.setItem("repoURLs", JSON.stringify(repoURLs));
+      }
+
+      infoDiv.remove();
+    }
+  });
+
+  return infoDiv;
+}
+
+
+window.addEventListener("load", afficherReposDepuisLocalStorage);
+
+var popupButton = document.getElementById("popupButton");
+popupButton.addEventListener("click", afficherInfosDepuisJSON);
+
+</script>
+<script>
+function afficherDonnees() {
+  var appListDiv = document.getElementById("appList");
+  var favapps = JSON.parse(localStorage.getItem("favapps")) || [];
+
+  fetch('apps.json')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var appsData = data.Apps;
+
+      favapps.forEach(function(favAppName) {
+        var appData = appsData.find(function(app) {
+          return app.name === favAppName;
+        });
+
+        if (appData) {
+          var dockDiv = document.createElement("div");
+          dockDiv.className = "dock";
+
+          var appCellLeftDiv = document.createElement("div");
+          appCellLeftDiv.className = "app_cell_left";
+
+          var appIconImg = document.createElement("img");
+          appIconImg.className = "appicon";
+          appIconImg.src = appData.icon;
+          appCellLeftDiv.appendChild(appIconImg);
+
+          var appCellMetaDiv = document.createElement("div");
+          appCellMetaDiv.className = "app_cell_meta";
+
+          var appNameDiv = document.createElement("div");
+          appNameDiv.className = "appname";
+          appNameDiv.textContent = appData.name;
+          appCellMetaDiv.appendChild(appNameDiv);
+
+          var appDevDiv = document.createElement("div");
+          appDevDiv.className = "appsection";
+          appDevDiv.textContent = appData.developer;
+          appCellMetaDiv.appendChild(appDevDiv);
+
+          appCellLeftDiv.appendChild(appCellMetaDiv);
+          dockDiv.appendChild(appCellLeftDiv);
+
+          var appGetDiv = document.createElement("div");
+          appGetDiv.className = "appget";
+
+          var appGetBtn = document.createElement("a");
+          appGetBtn.href = 'appinfos.html?name=' + encodeURIComponent(appData.name);
+
+          var getBtn = document.createElement("button");
+          getBtn.className = "btn";
+          getBtn.textContent = "";
+
+          var removeBtn = document.createElement("button");
+          removeBtn.className = "removebtn";
+          removeBtn.textContent = "Remove";
+          removeBtn.addEventListener("click", function() {
+            removeFavorite(appData.name);
+            appListDiv.removeChild(dockDiv);
+          });
+
+          appGetBtn.appendChild(getBtn);
+          appGetBtn.appendChild(removeBtn);
+          appGetDiv.appendChild(appGetBtn);
+          dockDiv.appendChild(appGetDiv);
+
+          appListDiv.appendChild(dockDiv);
+        }
+      });
+    })
+    .catch(function(error) {
+      console.log('Error', error);
+    });
+}
+
+function removeFavorite(appName) {
+  var favapps = JSON.parse(localStorage.getItem("favapps")) || [];
+  var updatedFavapps = favapps.filter(function(favAppName) {
+    return favAppName !== appName;
+  });
+  localStorage.setItem("favapps", JSON.stringify(updatedFavapps));
+}
+</script>
+
+<script src="js/index.js"></script>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    .featured {
+        font-family: helvetica;
+        display: flex;
+        padding-left: 16px;
+        padding-right: 16px;
+        transform: translateX(-32px);
+        margin-bottom: 16px;
+    }
+
+    .header {
+        padding: 140px 15px 11px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        min-width: 100vw;
+        scroll-snap-align: start;
+        text-align: center;
+        position: relative;
+    }
+
+    .featuredimg {
+        position: absolute;
+        height: 95%;
+        width: 92%;
+        top: 0;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+    }
+
+.dock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 382px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+    .app_cell_left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .appicon {
+        border-radius: 15px;
+        background-color: #000;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+    }
+
+    .app_cell_meta {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.2rem;
+    }
+
+    .appname,
+    .appsection {
+        width: 170px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: white;
+         width: 150px;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+    }
+
+    .appsection {
+        opacity: .6;
+        font-size: .900rem;
+        width: 161px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+.appget {
+    background-color: #303030;
+    border-radius: 40px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    object-fit: cover;
+    background-color: var(--accent-color);
+    align-items: center;
+}
+.appget a {
+    margin-bottom: 2px;
+}
+.getbtn {
+    background-color: ff3333;
+    border: none;
+    color: #ff3333;
+    font-weight: 750;
+}
+.overlay {
+    width: 100%;
+    height: 220px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.0), rgba(18,18,18,0.999));
+}

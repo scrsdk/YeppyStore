@@ -1,0 +1,159 @@
+/* -----------------------------------------
+[Master Stylesheet]
+
+Template Name: Suha - Multipurpose Ecommerce Mobile HTML Template
+Template Author: Designing World
+Template Author URL: https://themeforest.net/user/designing-world
+Version: 2.6.0
+Last Updated: December 18, 2021
+Created: December 15, 2019
+
+[Table of Contents]
+
+    * Google Fonts
+    * Include Third Party CSS Library
+        + Bootstrap CSS
+        + Animate CSS
+        + Owl Carousel CSS
+        + Font Awesome CSS
+        + Line Icon CSS
+    * Template Mixins
+        + Miscellaneous
+    * Template Variables
+    * Template Responsive
+    * Main Styles
+        + Reboot CSS
+        + Shortcode CSS
+        + Preloader CSS
+        + Animation CSS
+        + Demo CSS
+        + Header CSS
+        + Hero CSS
+        + Home CSS
+        + Footer CSS
+        + CTA CSS
+        + Register CSS
+        + Contact CSS
+        + Dark Mode CSS
+
+# [font-family]
+'Roboto', sans-serif;
+----------------------------------------- */
+/* Reboot CSS */
+/* Hero Slide CSS */
+body,
+html {
+	
+.page-content-wrapper {
+  margin-top: 50px;
+  margin-bottom: 58px; }
+
+.hero-slides {
+  position: relative;
+  z-index: 1; }
+  .hero-slides .owl-prev,
+  .hero-slides .owl-next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.11);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    left: 0;
+    margin-top: -15px;
+    color: #ffffff;
+    display: none; }
+  .hero-slides .owl-next {
+    left: auto;
+    right: 0; }
+  .hero-slides .owl-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .hero-slides .owl-dots .owl-dot {
+      -webkit-transition-duration: 500ms;
+              transition-duration: 500ms;
+      position: relative;
+      z-index: 1;
+      margin: 0 5px;
+      width: 8px;
+      height: 8px;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 8px;
+              flex: 0 0 8px;
+      max-width: 8px;
+      background-color: #ebebeb;
+      border-radius: 50%; }
+      .hero-slides .owl-dots .owl-dot.active {
+        background-color: #ffaf00; }
+        .hero-slides .owl-dots .owl-dot.active::after {
+          position: absolute;
+          width: calc(100% + 8px);
+          height: calc(100% + 8px);
+          z-index: 1;
+          content: "";
+          border: 2px solid #ffaf00;
+          left: -4px;
+          top: -4px;
+          border-radius: 50%; }
+
+.single-hero-slide {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 180px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 6px; }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .single-hero-slide {
+      height: 200px; } }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .single-hero-slide {
+      height: 220px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-hero-slide {
+      height: 280px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .single-hero-slide {
+      height: 300px; } }
+  @media only screen and (min-width: 1200px) {
+    .single-hero-slide {
+      height: 420px; } }
+  .single-hero-slide .slide-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+    .single-hero-slide .slide-content .slide-text {
+      padding-left: 2rem;
+      padding-right: 1rem; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .single-hero-slide .slide-content h4 {
+        font-size: 2rem; } }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .single-hero-slide .slide-content h4 {
+        font-size: 2rem; } }
+    @media only screen and (min-width: 1200px) {
+      .single-hero-slide .slide-content h4 {
+        font-size: 2.5rem; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .single-hero-slide .slide-content p {
+        font-size: 1.125rem; } }
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .single-hero-slide .slide-content p {
+        font-size: 1.125rem; } }
+    @media only screen and (min-width: 1200px) {
+      .single-hero-slide .slide-content p {
+        font-size: 1.25rem; } }

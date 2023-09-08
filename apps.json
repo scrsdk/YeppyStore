@@ -1,0 +1,45 @@
+{
+    "Info": {
+        "repoName": "Yeppy",
+        "repoAuthor": "SDKSCR",
+        "repoVersion": "beta",
+        "repoIcon": "https://scarletweb.ru/logo.JPEG"
+    },
+    "Apps": [
+        {
+            "name": "TikTok",
+            "developer": "TikTok Ldt.",
+            "version": "30.7",
+            "ipa": "https://github.com/Ibinou/dirtycowrepo/blob/main/Blacklist%202.ipa?raw=true",
+            "icon": "https://iosvizor.com/wp-content/uploads/2023/06/TikTok.png",
+            "screenshots": [
+				"https://trashbox.ru/ifiles/986208_5aa37d_screenshot_00.png_min/tik-tok-android-8.jpg",
+				"https://trashbox.ru/ifiles/986209_1ace91_screenshot_01.png_min/tik-tok-android-9.jpg"
+            ],     
+            "compatibility": "14.0+",
+            "description": "TikTok – приложение для создания небольших забавных видео с возможностью делиться своим творчеством с друзьями по всему миру.",
+            "section": "iOS"
+        },
+        {
+            "name": "uYou",
+            "version": "18.14.1-3.0",
+            "ipa": "https://github.com/qnblackcat/uYouPlus/releases/download/v18.14.1-3.0/uYouPlus_18.14.1_3.0.ipa",
+            "icon": "https://github.com/Ibinou/NoCodeHub-icons/blob/main/uYou+.PNG?raw=true",
+            "developer": "qnblackcat",
+            "section": "Tweaked Apps",
+            "description": "uYou+ is a modified version of uYou (made by @MiRO92) with additional features and mainly made for non jailbroken users!",
+            "compatibility": "iOS"
+        },
+        {
+            "name": "Spotify",
+            "version": "8.6.42",
+            "ipa": "https://github.com/SpotCompiled/SpotilifeC/releases/download/v1.2.3/SpotilifeC.v1.2.3_v8.6.42.ipa",
+            "icon": "https://github.com/Ibinou/NoCodeHub-icons/blob/main/60BF6600-8900-41C7-8D42-E1F03AC884B2.png?raw=true",
+            "category": "Tweaked Apps",
+            "description": "Enabled -No Forced Shuffle -Unlimited Skips -Extreme Quality stream enabled -Import songs from Music app",
+            "compatibility": "iOS 13+",
+            "banner": "https://photos5.appleinsider.com/gallery/43969-85507-Spotify-xl.jpg",
+            "developer": "Unknown"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+
+.signeddot{
+background-color:#00e600;
+float:right;
+width:25px;
+height:25px;
+border-radius:30px;
+position: absolute;
+top: 4%;
+left: 88%;
+}
